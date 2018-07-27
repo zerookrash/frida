@@ -1,20 +1,86 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<img class="portada" src="../assets/portada.png" alt="Portada">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Inicio</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/nosotros">Nosotros</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/servicios">Servicios</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/promociones">Promociones</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/consultorios">Consultorios Medicos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/anuncios">Anuncios</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contacto">Contacto</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+<!-- /Navbar -->
+
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer>
+  
+  <div class="container row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>Ubicación</h5>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Dirección:</strong> Ignacio Allende 45, Del Carmen, 04100 Ciudad de México, CDMX
+          </p>
+          <p>
+            <strong>Horario:</strong> 7:00 am - 1:00 am
+          </p>
+          <p>
+            Teléfono: 01 55 4033 7041
+          </p>
+        </div>
+      </div>  
+    </div>
+    <div class="col">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.4144119723273!2d-99.16371478555268!3d19.351200748294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffc4999596f7%3A0xfe86de30a2327d27!2sPlaza+Frida+Coyoacan!5e0!3m2!1ses-419!2smx!4v1532631163869" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h5>Redes Sociales</h5>
+        </div>
+        <div class="card-body">
+          
+        </div>
+    </div>
+    </div>
+  </div>
+
+</footer>
+<!-- /Footer -->

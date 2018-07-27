@@ -1,0 +1,16 @@
+.portada {
+  width: 100%;
+}
+
+footer {
+  background: #000000;
+  color: #000000;
+  align-self: auto;
+}
+footer .row {
+  align-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  float: none;
+  margin: 0 auto;
+}
