@@ -1,34 +1,33 @@
 <div class="container">
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+
+  <section class="form_wrap">
+
+    <section class="contact_info">
+      <section class="info_title">
+        <img src="../../../assets/contacto/frida.png" alt="">
+        <h1>Información <br> de contácto</h1>
+      </section>
+      <section class="info_items">
+        <p><strong>Correo: </strong> plazafrida@mail.com</p>
+        <p><strong>Telefono: </strong> 55 893 00284</p>
+      </section>
+    </section>
+
+    
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       
-      <form (ngSubmit)="onSubmit(contactForm);" #contactForm="ngForm">
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" #nombre [(ngModel)]="contactForm.name" placeholder="Nombre" required>
-          </div>
-          <div class="col">
-            <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="contactForm.email" placeholder="Correo Eléctronico" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <input type="tel" class="form-control" #tel [(ngModel)]="contactForm.phone" placeholder="Telefono de Contacto">
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" #asunto maxlength="60" [(ngModel)]="contactForm.subject" placeholder="Asunto" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <textarea class="form-control" #msn [(ngModel)]="contactForm.msn" rows="15" placeholder="Mensaje"></textarea>
-              <button [disabled]="!contactForm.form.valid" type="button" class="btn btn-primary">Enviar</button>
-            </div>
-          </div>
-        </div>
+        
+          <input placeholder="Nombre" type="text" formControlName="name" required>
+
+          <input placeholder="Correo Electrónico" type="email" formControlName="email" required>
+
+          <textarea formControlName="msn" id="msn" placeholder="Mensaje" cols="30" rows="10"></textarea>
+
+
+          <button class="btn btn-outline-primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+      
       </form>
-      
-    </div>
-  </div>
+  
+
+  </section>
 </div>
