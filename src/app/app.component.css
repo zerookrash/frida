@@ -14,3 +14,6 @@ footer .row {
   float: none;
   margin: 0 auto;
 }
+footer .map {
+  margin: 10px auto;
+}

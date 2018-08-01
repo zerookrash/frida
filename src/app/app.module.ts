@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from "@angular/router";
-import { ReactiveFormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+
+import { MessageService } from './services/message.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -38,10 +40,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule,
-    HttpModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

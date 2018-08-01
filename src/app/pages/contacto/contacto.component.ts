@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Component, OnInit } from "@angular/core";
+
+import { MessageService } from "../../services/message.service";
+
+import swal from "sweetalert";
 
 @Component({
   selector: "app-contacto",
@@ -7,17 +10,17 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
   styleUrls: ["./contacto.component.css"]
 })
 export class ContactoComponent implements OnInit {
-  contactForm = new FormGroup({
-    name: new FormControl(null),
-    email: new FormControl(null),
-    msn: new FormControl(null)
-  });
+  
 
-  constructor() {}
+  constructor(public _MessageService: MessageService) {}
 
   ngOnInit() {}
 
-  onSubmit() {
-    console.warn(this.contactForm.value);
+
+  contactForm(form) {
+    this._MessageService.sendMessage(form).subscribe(() => {
+      swal("Formulario de Contacto", "Mensaje enviado correctamente", "success");
+    });
   }
+  
 }
